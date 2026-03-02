@@ -13,20 +13,35 @@
   <body>
     <h1>Image Carousels</h1>
 
-  <div id="slider-container">
-    <button class="prev" onclick="moveSlide(-1)">
-      <i class="bi bi-arrow-left-circle-fill"></i>
-    </button>
-    <div id="slider-images">
-      <img class="nature-image" src="images/nature/1.png" alt="" />
-      <img class="nature-image" src="images/nature/2.png" alt="" />
-      <img class="nature-image" src="images/nature/3.png" alt="" />
-      <img class="nature-image" src="images/nature/4.png" alt="" />
+    <div class="carousel-container">
+      <button class="prev" onclick="moveNatureCarousel(-1)">
+        <i class="bi bi-arrow-left-circle-fill"></i>
+      </button>
+      <div class="carousel-images">
+        <img class="carousel-image nature-image" src="images/nature/1.png" alt="" />
+        <img class="carousel-image nature-image" src="images/nature/2.png" alt="" />
+        <img class="carousel-image nature-image" src="images/nature/3.png" alt="" />
+        <img class="carousel-image nature-image" src="images/nature/4.png" alt="" />
+      </div>
+      <button class="next" onclick="moveNatureCarousel(1)">
+        <i class="bi bi-arrow-right-circle-fill"></i>
+      </button>
     </div>
-    <button class="next" onclick="moveSlide(1)">
-      <i class="bi bi-arrow-right-circle-fill"></i>
-    </button>
-  </div>
+
+    <div class="carousel-container">
+      <button class="prev" onclick="moveAnimalsCarousel(-1)">
+        <i class="bi bi-arrow-left-circle-fill"></i>
+      </button>
+      <div class="carousel-images">
+        <img class="carousel-image animal-image" src="images/animals/1.png" alt="" />
+        <img class="carousel-image animal-image" src="images/animals/2.png" alt="" />
+        <img class="carousel-image animal-image" src="images/animals/3.png" alt="" />
+        <img class="carousel-image animal-image" src="images/animals/4.png" alt="" />
+      </div>
+      <button class="next" onclick="moveAnimalsCarousel(1)">
+        <i class="bi bi-arrow-right-circle-fill"></i>
+      </button>
+    </div>
 
     <script src="script.js"></script>
   </body>
