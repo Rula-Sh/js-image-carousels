@@ -1,4 +1,4 @@
-let natureCarousel = document.querySelectorAll(".nature-image");
+let natureCarousel = document.querySelectorAll(".nature");
 let natureIndex = 0;
 natureCarousel[natureIndex].style.display = "block";
 
@@ -18,33 +18,33 @@ function moveNatureCarousel(indexUpdate) {
   natureCarousel[natureIndex].style.display = "block";
 }
 
-let animalCarousel = document.querySelectorAll(".animal-image");
-let animalIndex = 0;
-animalCarousel[animalIndex].style.display = "block";
+let landCarousel = document.querySelectorAll(".land");
+let landIndex = 0;
+landCarousel[landIndex].style.display = "block";
 
-function moveAnimalsCarousel(indexUpdate) {
-  let oldIndex = animalIndex;
-  animalIndex += indexUpdate;
+function movelandCarousel(indexUpdate) {
+  let oldIndex = landIndex;
+  landIndex += indexUpdate;
 
-  if (animalIndex === animalCarousel.length) {
-    animalIndex = 0;
-  } else if (animalIndex < 0) {
-    animalIndex = animalCarousel.length - 1;
+  if (landIndex === landCarousel.length) {
+    landIndex = 0;
+  } else if (landIndex < 0) {
+    landIndex = landCarousel.length - 1;
   }
 
   if (indexUpdate === 1) {
-    animalCarousel[oldIndex].style.animation = "slide-to-left 1.5s";
+    landCarousel[oldIndex].style.animation = "slide-to-left 1.5s";
     setTimeout(() => {
-      animalCarousel[oldIndex].style.display = "none";
+      landCarousel[oldIndex].style.display = "none";
     }, 1300);
-    animalCarousel[animalIndex].style.display = "block";
-    animalCarousel[animalIndex].style.animation = "slide-from-right 1.5s";
+    landCarousel[landIndex].style.display = "block";
+    landCarousel[landIndex].style.animation = "slide-from-right 1.5s";
   } else {
-    animalCarousel[oldIndex].style.animation = "slide-to-right 1.5s";
+    landCarousel[oldIndex].style.animation = "slide-to-right 1.5s";
     setTimeout(() => {
-      animalCarousel[oldIndex].style.display = "none";
+      landCarousel[oldIndex].style.display = "none";
     }, 1300);
-    animalCarousel[animalIndex].style.animation = "slide-from-left 1.5s";
-    animalCarousel[animalIndex].style.display = "block";
+    landCarousel[landIndex].style.animation = "slide-from-left 1.5s";
+    landCarousel[landIndex].style.display = "block";
   }
 }
