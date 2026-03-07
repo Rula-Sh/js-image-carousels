@@ -59,6 +59,27 @@ h1 {
   animation: fade 1s;
 }
 
+.auto-scroll {
+  animation: auto-scroll 40s linear infinite;
+}
+
+.auto-scroll:hover {
+  animation-play-state: paused;
+}
+.sea {
+  width: 650px;
+  height: 100%;
+  display: block;
+  position: static;
+  transform: none;
+  transition: transform 0.3s ease;
+}
+
+.sea:hover {
+  transform: scale(1.05);
+  z-index: 10;
+}
+
 .prev,
 .next {
   position: absolute;
@@ -119,5 +140,14 @@ h1 {
   }
   to {
     transform: translateX(150%);
+  }
+}
+
+@keyframes auto-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-6803px);
   }
 }
