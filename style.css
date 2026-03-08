@@ -80,6 +80,30 @@ h1 {
   z-index: 10;
 }
 
+#cats {
+  display: flex;
+  gap: 25px;
+  position: absolute;
+  top: 50%;
+  left: 4vmin;
+  transform: translate(0, -50%);
+  user-select: none;
+  cursor: grab;
+}
+
+#cats:active {
+  cursor: grabbing;
+}
+
+.cat {
+  height: 370px;
+  width: 650px;
+  object-fit: cover;
+  object-position: 100% center;
+  display: block;
+  border-radius: 20px;
+}
+
 .prev,
 .next {
   position: absolute;
